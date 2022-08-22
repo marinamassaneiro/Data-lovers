@@ -16,14 +16,50 @@ Dados escolhidos:
 
 O projeto apresenta o universo dos Studio Ghibli a partir de 20 longas, suas sinopses, informação de personagens, locais e veículos únicos. Na página é possível filtrar os filmes por minutagem, onde será possível escolher um filme que caiba no seu tempo disponível. Ordená-los por nota e visualizar os filmes que possuem uma maior aceitação pelo público. Com isso, a pessoa usuária terá a possibilidade de analisar os filmes que já visualizou ou mesmo decidir qual próximo filme gostaria de assistir.
 
-Como ideia inicial focamos na construção de uma página única com a função de exibir os pôsteres dos filmes e informações detalhadas de cada um deles. Proposta suficiente para atender as necessidades da nossa *História de Usuário 1*. Desta ideia surgiu nosso protótipo inicial de baixa e alta fidelidade.
+## 2. Estrutura dos Dados
+
+O primeiro passo foi entender como os nossos dados estavam estruturados, neste caso um array de objetos, nos quais alguns valores também eram compostos de array de outros objetos. Ou seja, para alcançar algumas informações precisaríamos entender como realizar iterações em arrays de objetos, e em alguns casos, mergulhar um pouco mais e acessar dados em array de objetos alocados em valores dos objetos anteriores. 
+
+- Object Studio Ghibli:
+  - Films => cada *film* um objeto com as propriedades:
+    - People => cada *people* um objeto 
+    - Location => cada *location* um objeto
+    - Vehicles => cada *vehicles* um objeto
+
+#### Card Filme:
+
+<img src="https://github.com/marinamassaneiro/Data-lovers/blob/readme/src/img/Readme/CardFilme.png" width = 450>
+
+Ideia de como criar o cartão:
+- Criar a estrutura do card ampliado em html e estilizar no css;
+- Capturar os valor das chaves (ex: description, director, poster, release_date, rt_score) e inserí-los em campos específicos do html (innerHTML);
+- realizar uma contagem de elementos do array (ex: people) para gerar a contagem de personagens do filme;
+- realizar um count unique dos valores (ex: specie de personagens no array people) para ver quais espécies há naquele filme;
+
+Como ideia inicial focamos na construção de uma página única com a função de exibir os pôsteres dos filmes e informações detalhadas de cada um deles. Proposta suficiente para atender as necessidades das nossas *História de Usuário 1 e 2*. Desta ideia surgiu nosso protótipo inicial de baixa e alta fidelidade.
 
 Produto inicial:
 - Catálogo completo;
-- 2 opções de filtro.
+- 1 opção de filtro.
 
 ### 1.1 **História de Usuário 1**
->Como usuário quero escolher um filme pela duração para que caiba no meu tempo livre atual.
+> Como pessoa usuária gostaria de conhecer as produções do Stúdio Ghibli para ver quais e quantos filmes ainda não vi.
+
+Critérios de aceitação
+- apresentar todos os filmes;
+
+Elementos:
+- dispor os pôsteres dos filmes na tela principal, com nome e ano de produção;
+
+Definição de pronto:
+- o código está de acordo com o guia e estilos;
+- o código está no repositório;
+- o código tem e passa os testes necessários;
+- o código foi feito, ao menos em parte, em pair programming e/ou feito em code review;
+- a história implementada foi testada com, pelo menos 3 usuários, e foram incorporados os melhoramentos necessários identificados nos testes de usabilidade.
+
+### 1.2 **História de Usuário 2**
+> Como usuário quero escolher um filme pela duração para que caiba no meu tempo livre atual.
 
 Critérios de aceitação:
 - filtro para minutos
@@ -43,9 +79,9 @@ Definição de pronto:
 <img src="https://github.com/marinamassaneiro/Data-lovers/blob/readme/src/img/Readme/baixa%20fidelidade%20mobile.png" width = 200>      <img src="https://github.com/marinamassaneiro/Data-lovers/blob/readme/src/img/Readme/baixa%20fidelidade%20desktop.png" width = 350>
 
 ### 1.3 Protótipo de Alta Fidelidade
-
+<inserir imagem do primeiro protótipo>
 ## 2. **Ampliação da Proposta Inicial**
-De modo a atender *histórias de usuários* mais detalhadas, assim como tornar a navegabilidade mais fluída optamos por dividir as informações (filmes, personagens e veículos/locais) em páginas específicas.
+De modo a atender *histórias de usuários* mais detalhadas, assim como tornar a navegabilidade mais fluída optamos por dividir as informações (filmes, personagens e veículos/locais) em páginas específicas e alcançamos a seguinte estrutura:
 
 - 🏠 **Home** com uma breve introdução do projeto e uma apresentação de dados numérico sobre os dados apresentados, tais como a quantidade de filmes, personagens, veículos e locais apresentados nas páginas seguintes. 
 
@@ -146,19 +182,7 @@ Elementos:
 
 Definição de pronto()
 
-## 4. Estrutura dos Dados:
 
-Passo a passo do algoritmo:
-- Iterar o objeto para capturar os nome de cada filme (chave title e seu valor) e seu poster (chave poster e seu valor - src da img) correspondente para gerar a miniatura no catálogo geral da página principal.
-
-#### Card Filme:
-<img src="https://github.com/marinamassaneiro/Data-lovers/blob/readme/src/img/Readme/CardFilme.png" width = 450>
-
-Ideia de como criar o cartão:
-- Criar a estrutura do card ampliado em html e estilizar no css;
-- Capturar os valor das chaves (ex: description, director, poster, release_date, rt_score) e inserí-los em campos específicos do html (innerHTML);
-- realizar uma contagem de elementos do array (ex: people) para gerar a contagem de personagens do filme;
-- realizar um count unique dos valores (ex: specie de personagens no array people) para ver quais espécies há naquele filme;
 
 ## 5. Protótipos de alta fidelidade:
 
