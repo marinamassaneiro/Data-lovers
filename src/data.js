@@ -1,5 +1,4 @@
-export const ghibli = {filterDuration, sortedFilms, countFilms,
-  countLocations, countPeople, countVehicles, filmPeople};
+export const ghibli = {filterDuration, sortedFilms, countFilms, countLocations, countPeople, countVehicles, filmPeople};
 
 function filterDuration (films, selection) {
   const filmsDuration = films.filter((film) => {

@@ -31,7 +31,6 @@ const btnFilmPeople = document.querySelectorAll('.btn-film-people');
 for (let i = 0; i < btnFilmPeople.length; i++){
   btnFilmPeople[i].addEventListener ('click', () => {
     const filmPeople = ghibli.filmPeople(films, btnFilmPeople[i].value);
-    console.log(filmPeople)
     cataloguePeople.innerHTML = printCataloguePeople(filmPeople); 
   });
 }

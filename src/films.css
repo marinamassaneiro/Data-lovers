@@ -1,136 +1,140 @@
 * {
-    font-family: 'Lato', sans-serif;
     margin: 0 auto;
-    padding: 0;
     box-sizing: border-box;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
     text-align: center;
 }
-.body-films {
-    background-color: #1D1C38;
+:root {
+    --background: #1D1C38;
+    --background-items: #e26c7a;
+    --background-items-hover: #f1faee;
+    --background-modal: #2864A8;
+    --background-out-modal: rgba(0, 0, 0, 0.5);
+    --color-cards: #8193A8;
+    --color-font: #f1faee;
+}
+body {
+    background-color: var(--background);
+    background-image: url(img/mononoke.png);
+    background-repeat: no-repeat;
+    background-size: 35vw;
+    background-position: 60vw 15vw;
+}
+.top {
+    width: 100%;
+}
+.top-img{
+    width: 100%;
+    margin-top: 20px;
+}
+.top-title h1{
+    margin: -8vw 0 0;
+    color: var(--color-font);
+    font-size: 6vh;
 }
 .container {
     margin: 1vw 13vw;
     min-height: 125vw;
 }
 .navbar {
-    margin: 7vw 0 0 15vw;
-    font-size: medium;
-    text-align: left;
     overflow: hidden;
+    margin: 7vw 0 0 15vw;
     padding: 0 10px;
-    max-width: 100%;
+    font-size: large;
+    text-align: left;
 }
 .navbar a {
-    color: #f1faee;
-    font-size: 17px;
-    text-align: center;
-    text-decoration: none;
-    padding: 14px 16px;
     float: left;
     display: block;
+    padding: 14px 16px;
+    color: var(--color-font);
+    font-size: 17px;
+    text-decoration: none;
 }
 .navbar a:hover {
     text-decoration: underline;
 } 
 .navbar a.active {
-    color:  #e26c7a;
+    color:  var(--background-items);
     text-shadow:3px 3px 3px black;
 }
-.top-films {
-    color: #f1faee;
-    text-align: center;
-    width: 100%;
-}
-.img-top-films{
-    width: 100vw;
-    margin-top: 2vw;
-    margin-left: -10px;
-}
-.title-films{
-    font-size: 4.5vw;
-    margin: -42vw 0 0;
-}
-.films-description {
+.description {
     margin: 3vw 1vw 1vw;
-    width: 65%;
-    font-size: 1.8rem;
-    color: #f1faee;
-    font-weight: 400;
     padding: 2vw;
+    width: 65%;
+    color: var(--color-font);
+    font-size: 2.5vh;
+    font-weight: 400;
     text-align: left;
     text-indent: 10vw;
 }
 .btn-catalogue {
-    width: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 3vw 3vw 3.3vw;
     margin: 0;
+    padding: 3vw 3vw 3.3vw;
+    width: 70%;
 }
 .btn-catalogue-filter{
-    margin: auto;
-    border:none;
+    background-color: var(--background-items);
+    padding: 0.5vw 1vw;
     min-height: 100%;
     width: 65%;
-    padding: 0.5vw 1vw;
-    background-color: #e26c7a;
-    color: #f1faee;
-    text-align: center;
+    cursor: pointer;
+    border:none;
+    border-radius: 0.5vw;
+    color: var(--color-font);
     font-size: 1.2rem;
     font-weight: 600;
-    cursor: pointer;
-    border-radius: 0.5vw;  
 }
 .btn-catalogue-filter:hover {
-    background-color: #f1faee;
-    color: #e26c7a;
+    background-color: var(--background-items-hover);
+    color: var(--color-font);
 }
 .catalogue {
-    margin: 3vw 0 2vw;
     display: grid;
+    grid-template-rows: auto;
     grid-template-columns: repeat(5, 1fr);
     column-gap: 1vw;
     row-gap: 1vw;
-    grid-template-rows: auto;
+    margin: 3vw 0 2vw;
 }
 .card {
-    background-color: #8193A8;
+    background-color: var(--color-cards); 
     padding: 1vw;
-    text-align: center;
-    font-size: 1.2rem;
     border-radius: 0.3vw;
+    font-size: 1.2rem;
 }
 .card-img {
     width: 100%;
-    /* max-height: 85%; */
     margin-bottom: 0.4vw;
 }
 .btn-modal {
     background: none;
-    border: none;
-    cursor: pointer;
     padding: 0;
+    cursor: pointer;
+    border: none;
 }
 .btn-modal:hover {
     opacity: 0.4;
 }
 .modal {
-    display: none; 
+    background-color: var(--background-out-modal);
     position: fixed; 
+    display: none; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-content {
+    background-color: var(--background-modal); 
+    margin: 7% 20%;
+    padding: 2vw 4vw 2.5vw;
     min-width: 60%;
     min-height: 45%;
-    margin: 7% 20%;
-    background-color: #2864A8;
-    color: #f1faee;
-    padding: 2vw 4vw 2.5vw;
-    text-align: center;
+    color: var(--color-font);
     font-size: 1.25rem;
     font-weight: 400;
 }
@@ -143,68 +147,67 @@
     margin: -1vw -5vw 1vw;
 }
 .close {
-    color:#f1faee;
-    font-weight: 600;
-    cursor: pointer;
-    background-color:rgb(40, 100, 168);
-    padding: 0.5vw 2vw;
-    border-radius: 0.5vw;
-    font-size: 1.2rem;
+    background-color:var(--background-modal);
     margin-top: 3vw;
-    border: 1px solid #f1faee;
+    border: 1px solid var(--color-font);
+    padding: 0.5vw 2vw;
+    cursor: pointer;
+    border-radius: 0.5vw;
+    color: var(--color-font);
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 .close:hover {
-    background-color: #f1faee;
-    color: rgb(40, 100, 168);
+    background-color: var(--color-font);
+    color: var(--background-modal);
 }
 .back {
     margin: 5%;
-    text-align: center;
 }
 .back-top {
-    color: #f1faee;
+    color: var(--color-font);
     font-size: 1.3rem;
     text-decoration: none;
 }
 .back-top:hover {
-    text-shadow:4px 4px 4px #e26c7a;
+    text-shadow:4px 4px 4px var(--background-items);
 }
-.footer {
+footer {
+    background-color: var(--background-items);
     max-width: 100%;
-    color:  #f1faee;
-    font-size: 1rem;
     bottom: 0;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: auto;
     column-gap: 5vw;
     align-items: center;
-    background-color: #e26c7a;
+    color:  var(--color-font);
+    font-size: 1rem;
 }
-.logo-ghibli {
+.img-logo-ghibli {
     width: 180px;
 }
-.totoro {
+.img-totoro {
     width: 10rem;
 }
 .links {
-    color:  #f1faee;
+    color:  var(--color-font);
     text-decoration: none;
 }
 .links:hover {
     text-shadow:3px 3px 3px black;
 }
-@media only screen and (max-width: 900p) {
+@media only screen and (max-width: 800px) {
+    .title-films {
+        font-size: 2.5rem;
+    }
     .films-description {
-        margin: 0;
-        width: 65%;
+        color: var(--color-font);
         font-size: 1rem;
-        color: #f1faee;
-        padding: 1.5vw 2vw 2vw;
     }
     .navbar a {
-        font-size: 12px;
         padding: 12px 10px;
+        font-size: 14px;
     }
     .btn-catalogue {
         padding: 1vw;
@@ -215,19 +218,16 @@
     }
     .catalogue {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto;
         column-gap: 1.5vw;
         row-gap: 1.5vw;
     }
     .card {
-        text-align: center;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
     }
     .card-img {
         margin-bottom: 1vw;
     }
     .modal-content {
-        padding: 2vw 4vw 2.5vw;
         font-size: 0.85rem;
     }
     .modal-director {
@@ -254,23 +254,25 @@
 }
 
 @media screen and (max-width: 420px){
+    .title-films {
+        font-size: 1.8rem;
+    }
     .navbar {
         margin: 7vw 0 0 10vw;
     }
     .navbar a {
-        font-size: 7.5px;
         padding: 5px 3px;
+        font-size: 9px;
     }
     .films-description {
-        font-size: 0.5rem;
-        padding: 0 2vw 1.3vw -1vw;
         margin: 1vw 1vw 0.5vw 0;
+        font-size: 0.8rem;
     }
     .btn-catalogue-filter {
-        font-size: 0.4rem;
-        width: 77%;
         margin-right: 5vw;
         padding: 0.3vw 1vw;
+        width: 77%;
+        font-size: 0.4rem;        
     }
     .catalogue {
         grid-template-columns: repeat(3, 1fr);
@@ -285,11 +287,11 @@
         margin-bottom: 1vw;
     }
     .modal-content {
+        margin: 30% 10%;
+        padding: 2vw 4vw 4vw;
         min-width: 80%;
         min-height: 35%;
-        margin: 30% 10%;
         font-size: 0.6rem;
-        padding: 2vw 4vw 4vw;
     }
     .modal-director {
         margin: 1vw 0;
