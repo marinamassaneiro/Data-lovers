@@ -74,7 +74,7 @@ Definição de pronto:
 
 ### 3.2 **História de Usuário 2**
 
-> Como pessoa usuária gostaria de escolher um filme onde as personagens principais são do gênero feminino (os dados de idade não possuem padrão e apresentam números e faixa etária misturados), para discutir gênero com minha filha.
+> Como pessoa usuária gostaria de escolher um filme onde as personagens principais são do gênero feminino, para discutir gênero com minha filha.
 
 **Critérios de aceitação:**
 - Filtro para gênero;
@@ -88,7 +88,7 @@ Definição de pronto:
 - o código tem e passa nos testes necessários;
 - o código foi feito, ao menos em parte, em pair programming e/ou feito em code review;
 
-🛑 **Desafio**: realizar uma contagem de personagens por gênero e por filme, depois calcular se há mais personagens de gênero feminino ou masculino em cada filme e em seguida construir um filtro que alcance essa informação.
+🛑 **Desafio**: realizar uma contagem de personagens por gênero e por filme, depois calcular se há mais personagens de gênero feminino ou masculino em cada filme e em seguida construir um filtro que alcance essa informação. No quesito idade, os dados não possuem padrão e apresentam números (13, 70, etc) e faixa etária (elder, children, etc) misturados.
 
 ✅ **Resolução**: desafio superado após estudarmos sobre *filter*. Assim, escrevemos uma fnção que extrai dos dados de cada filme um array de personagens. Em seguida, filtra apenas personagens de gênero feminino. Depois compara o tamanho do array filtrado com o array original e caso o array filtrado seja maior que 50% do array original afirmamos que há mais personagens de gênero feminino no filme em questão.
 
@@ -151,7 +151,7 @@ Definição de pronto:
 ✅ **Resolução**: superamos esse desafio ao associar a template string do modal com a template string original que insere os pôsteres dos filmes na tela. O pôster do filme tornou-se o botão que daria acesso às informações adicionais. Ao final entendemos que o modal seria um só, porém teria informações que seriam substituídas de acordo com o filme clicado. 
 
 ### 6.3 **História de Usuário 5**
-> Como pessoa usuária gostaria de visualizar informações de personagens do filme que assisti para aprender o nome de todos.
+> Como pessoa usuária gostaria de visualizar informações de personagens e locais do filme que assisti para aprender o nome de todos.
 
 Critérios de aceitação:
 - conseguir visualizar todos os personagens de um filme específico;
@@ -160,6 +160,7 @@ Critérios de aceitação:
 Definição de pronto:
 - Cards de personagens;
 - Informações textuais relacionadas ao card de cada personagem;
+- o código tem e passa nos testes necessários;
 
 🛑 **Desafio:** muitas imagens de personagens estavam com o link quebrado.
 
