@@ -209,7 +209,7 @@ footer {
 
   .logo-ghibli,
   .totoro {
-    width: 120px;
+    width: 100px;
   }
 }
 
@@ -235,6 +235,10 @@ footer {
   .btn-locations,
   .btn-vehicles {
     font-size: 0.6rem;
+  }
+
+  .container {
+    min-height: 130vw;
   }
 
   .catalogue {

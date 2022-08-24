@@ -3,6 +3,8 @@ import data from '../data/ghibli/ghibli.js';
 
 const films = data.films;
 const modal = document.querySelector('.modal');
+const btnFilterDuration = document.querySelector('#filter-duration');
+const btnOrderFilms = document.querySelector('#order-by');
 
 function printCatalogue(filmsList) {
   const arrayFilms = filmsList.map((film) => {
@@ -40,7 +42,7 @@ function printModal (film) {
   `
 }
 
-function montarTela (films){
+function printCards (films){
   const catalogue = document.querySelector('.catalogue');
   catalogue.innerHTML = printCatalogue(films);
 
@@ -51,7 +53,7 @@ function montarTela (films){
     btnModal[i].addEventListener ('click', showModal);
   }
 }
-montarTela(films);
+printCards(films);
 
 function prepareModal (film) {
   return function (){
@@ -76,16 +78,14 @@ function hideModal(e){
   }
 }
 
-const btnFilterDuration = document.querySelector('#filter-duration');
 btnFilterDuration.addEventListener ('change', () => {
   const selected = (btnFilterDuration).value;
   const filterDuration = ghibli.filterDuration(films, selected);
-  montarTela(filterDuration);
+  printCards(filterDuration);
 });
 
-const btnOrderFilms = document.querySelector('#order-by');
 btnOrderFilms.addEventListener('change', () => {
   let selection = btnOrderFilms.value;
   const sortedFilms = ghibli.sortedFilms(films, selection);
-  montarTela(sortedFilms);
+  printCards(sortedFilms);
 });
